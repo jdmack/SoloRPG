@@ -50,9 +50,9 @@ RULES
 
 6. Canon and Intelligence are separate.
 
-Canon contains objective reality.
+Canon contains world truth.
 
-Intelligence contains only information known by Nick Easton and/or the player.
+Player Intelligence contains only information known to the player character.
 
 If information is secret, unknown, or unrevealed, it belongs only in Canon.
 
