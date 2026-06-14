@@ -211,3 +211,230 @@ FAIL if failure immediately creates an extreme consequence unrelated to the acti
 FAIL if the DM ignores the failed result.
 
 ---
+
+## Scenario 105: Waiting for a Contact
+
+### Situation
+
+Nick arrives early.
+
+The meeting is not for another hour.
+
+Nick chooses to wait and observe the area.
+
+### Validation Targets
+
+* Time advancement is explicit
+* The DM tracks the passage of time
+* Observation opportunities may occur during the wait
+* Time advancement does not skip player decision points
+* Waiting is treated as gameplay, not dead time
+
+### Expected Behavior
+
+The DM should acknowledge the declared wait.
+
+The DM should advance time deliberately.
+
+The DM should provide relevant observations if appropriate.
+
+The DM should stop if something noteworthy occurs.
+
+The DM should not automatically skip through multiple scene transitions.
+
+### Failure Conditions
+
+FAIL if time advancement is hidden.
+
+FAIL if the DM skips directly to a later scene without handling the wait.
+
+FAIL if the DM ignores the passage of time.
+
+FAIL if the DM advances through multiple decision points without player input.
+
+## Scenario 106: Multi-Turn Conversation
+
+### Situation
+
+Nick is speaking with an NPC.
+
+The NPC possesses information relevant to the discussion.
+
+Nick asks a question.
+
+### Validation Targets
+
+* Conversation remains interactive across multiple exchanges
+* NPCs do not monopolize the conversation
+* NPCs are interruptible
+* Information is delivered incrementally
+* Decision points are preserved during conversation
+
+### Expected Behavior
+
+The NPC should answer naturally.
+
+The NPC should not deliver all available information at once.
+
+The NPC should provide opportunities for player responses.
+
+The conversation should proceed as a series of exchanges rather than a monologue.
+
+The DM should stop at natural conversational handoff points.
+
+### Failure Conditions
+
+FAIL if the NPC delivers a large exposition dump.
+
+FAIL if the NPC advances through multiple conversational beats without player participation.
+
+FAIL if the NPC becomes effectively non-interruptible.
+
+FAIL if the DM decides the player's side of the conversation.
+
+FAIL if the conversation resolves itself without player involvement.
+
+---
+
+## Scenario 107: Relationship Update
+
+### Situation
+
+Nick is speaking with an NPC who has useful information.
+
+Nick answers honestly, respects the NPC's boundaries, and does not pressure them.
+
+The NPC shares a limited but useful detail.
+
+### Validation Targets
+
+* Relationship state is considered
+* Trust changes only if justified
+* Relationship changes are specific, not generic
+* The DM does not overstate the relationship shift
+* The relationship update does not replace player agency
+
+### Expected Behavior
+
+The DM should resolve the exchange normally.
+
+If Nick's behavior plausibly affects the relationship, the DM should note the relationship change.
+
+The change should be modest and specific.
+
+The DM should not turn one respectful exchange into full trust, loyalty, friendship, or major access.
+
+The DM should preserve the NPC's independence, limits, and incomplete information.
+
+### Failure Conditions
+
+FAIL if no relationship impact is considered.
+
+FAIL if the NPC becomes unrealistically trusting.
+
+FAIL if the relationship update is vague, such as "trust improves" with no explanation.
+
+FAIL if the relationship update grants access or loyalty not supported by the scene.
+
+FAIL if the DM treats the NPC as solved or fully won over.
+
+---
+
+## Scenario 108: Social Roll
+
+### Situation
+
+Nick is speaking with an NPC.
+
+The NPC has additional information but is reluctant to share it.
+
+Nick attempts to persuade the NPC to reveal more.
+
+### Validation Targets
+
+* A social roll is triggered when appropriate
+* The roll is visible
+* Success does not create mind control
+* Failure remains playable
+* NPC motivations remain intact
+
+### Expected Behavior
+
+The DM should recognize that Nick is attempting to influence another person.
+
+The DM should resolve the uncertain outcome using the social resolution system.
+
+The roll should be displayed.
+
+A successful result should improve the outcome without removing the NPC's agency.
+
+A failed result should not end the conversation or create a dead end.
+
+### Failure Conditions
+
+FAIL if no roll occurs despite meaningful uncertainty.
+
+FAIL if success causes the NPC to act against established motivations without justification.
+
+FAIL if success grants unrealistic loyalty, friendship, or obedience.
+
+FAIL if failure immediately ends the scene.
+
+FAIL if failure prevents further investigation.
+
+---
+
+## Scenario 109: Archivist Delta Generation
+
+### Situation
+
+A short scene has concluded.
+
+During the scene:
+
+- Nick met with an NPC.
+- Nick learned a new fact.
+- Nick formed a new lead.
+- A relationship changed slightly.
+- Time advanced.
+
+The DM is instructed to generate an Archivist Delta.
+
+### Validation Targets
+
+* Important state changes are captured
+* Facts and theories remain separated
+* Relationship changes are recorded
+* Time advancement is recorded
+* The output is suitable for repository persistence
+
+### Expected Behavior
+
+The generated delta should capture:
+
+- New facts
+- New leads
+- Relationship changes
+- Time changes
+- Current scene state
+
+The delta should distinguish between:
+
+- Facts
+- Assessments
+- Theories
+- Unknowns
+
+The delta should contain only information established during play.
+
+### Failure Conditions
+
+FAIL if important state changes are omitted.
+
+FAIL if theories are recorded as facts.
+
+FAIL if relationship changes are omitted.
+
+FAIL if time advancement is omitted.
+
+FAIL if the delta invents information not established during play.
